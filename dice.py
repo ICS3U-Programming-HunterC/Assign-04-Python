@@ -7,33 +7,38 @@
 import random
 
 def main():
-
-    # Get the user input as a string
-    user_input_string = input("Enter a whole number: ")
-    print("")
-    
-    
+    # initialize min, max and the counter
     min = 1
     max = 6
+    counter = 0
 
     roll_again = "yes"
 
     while roll_again == "yes" or roll_again == "y":
+        counter = counter + 1
+        # generate 2 random numbers
+        random_1 = (random.randint(min, max))
+        random_2 = (random.randint(min, max))
         print ("Rolling the dices...")
         print ("The values are....")
-        print (random.randint(min, max))
-        print (random.randint(min, max))
-
+        print (random_1, end = ' ') 
+        print (random_2)
+        print ("")
+        
+        # if the dice are the same, then it will roll doubles and the
+        # program will end and tell them how many attempts it took
+        if random_1 == random_2:
+            print ("You rolled doubles!! Thanks for playing!")
+            print ("It took {0} attempts to roll doubles" .format(counter))
+            break
+        
+        # ask the user if they want to roll again
         roll_again = input("Roll the dices again?")
         
-        
-    try:
-        # get the user number
-
-
-    except Exception:
-        print("That is not a number!!")
-
+        # if they input no, the program will end
+        if roll_again == "no" or roll_again == "n":
+            print ("Thanks for playing!!")
+            break
 
 
 if __name__ == "__main__":
