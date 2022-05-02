@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # Created by: Hunter Connolly
 # Created on: April 20, 2022
-# This program asks the user to enter a whole number
-# it then calculates the factorial of that number
+# This program rolls a dice and if they roll a 
+# double they win
 
 import random
 
@@ -33,7 +33,7 @@ def main():
             break
         
         # ask the user if they want to roll again
-        roll_again = input("Roll the dices again?")
+        roll_again = input("Roll the dices again?: ")
         
         # if they input no, the program will end
         if roll_again == "no" or roll_again == "n":
